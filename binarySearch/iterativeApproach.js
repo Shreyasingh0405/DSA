@@ -3,8 +3,8 @@
 let array = [4, 5, 7, 9, 10,98];
 let start = 0;
 let end = array.length - 1;
- let target = 98;
-let position = undefined
+ let target = 980;
+let position = -1
 while (start <= end) {
     let mid = Math.floor((start + end) / 2)
     if (array[mid] == target) {
