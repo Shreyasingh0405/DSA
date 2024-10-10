@@ -2,6 +2,7 @@
 //working process
 //1. it first divide the sorted array half then find the mid point and compare it with the target value if mid is equals the target value then the process terminated.
 //2. if mid is not equals in target value and it's small than target value then process executed from left side otherwise if mid is greater than targeted value then process executed from right side and again repeats step 1 and step 2 until getting the targeted value.
+
 //Two approach to solve binary search 
 //1. iterative          2.Recurssive.
 

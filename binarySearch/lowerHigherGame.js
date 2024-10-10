@@ -1,5 +1,5 @@
 // Example of the guess function (for testing purposes)
-let pickedNumber = 6; // The number to guess
+let pickedNumber = 10; // The number to guess
 
 /**
  * Mock implementation of guess API
@@ -37,4 +37,4 @@ var guessNumber = function (n) {
 };
 
 // Test the function with n = 10
-console.log(guessNumber(10)); // Output should be 6
+console.log(guessNumber(10)); 

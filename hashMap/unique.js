@@ -1,4 +1,22 @@
 // //How you can find unique values in an array?
+
+function findUniques(arr) {
+  const map = new Map();
+  
+  // Iterate through the array and add each element to the map
+  arr.forEach(item => {
+      map.set(item, true); // The value can be anything; we just need the keys to be unique
+  });
+  
+  // Convert the keys of the map back to an array
+  return Array.from(map.keys());
+}
+
+// Example usage
+const inputArray = [1, 2, 2, 3, 4, 4, 5];
+const uniqueValues = findUniques(inputArray);
+console.log(uniqueValues); // Output: [1, 2, 3, 4, 5]
+
 // //method1
 // let array = [1, 2, 2, 3, 4, 5, 6, 6, 6, 6]
 // const result = new Set(array)
