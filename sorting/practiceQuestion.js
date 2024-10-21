@@ -79,13 +79,12 @@ printList(sortedList);
 
 
 //### 3. **Find Kth Largest Element** (It's like finding the needle in a haystack, but with numbers 🔢)
-
+//2nd method //
 
 function findKthLargest(nums1, k) {
     nums.sort((a, b) => b - a);  // Sort in descending order
     return nums1[k - 1]; // kth largest element
 }
-
 let nums1 = [3, 2, 3, 1, 2, 4, 5, 5, 6];
 let k = 4;
 console.log(findKthLargest(nums1, k)); 
@@ -142,3 +141,9 @@ function mergeIntervals(intervals) {
 
 let intervals = [[1, 3], [2, 6], [8, 10], [15, 18]];
 console.log(mergeIntervals(intervals))
+
+//find kth smallest number
+//find 2 smallest number.
+//find 2 largest number.
+
+//map use karke kth largest:- hash map and two pointer.

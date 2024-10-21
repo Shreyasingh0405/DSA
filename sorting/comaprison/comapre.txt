@@ -1,0 +1,57 @@
+1. Bubble Sort
+Time Complexity: O(n²) (average/worst)
+Space Complexity: O(1)
+Stability: Stable
+Best Case: O(n) (already sorted)
+Worst Case: O(n²) (reverse order)
+Use Case: Very small datasets, mostly sorted data
+
+
+2. Selection Sort
+Time Complexity: O(n²) (average/worst)
+Space Complexity: O(1)
+Stability: Unstable
+Best Case: O(n²)
+Worst Case: O(n²)
+Use Case: Small datasets, when memory is constrained
+
+
+3. Insertion Sort
+Time Complexity: O(n²) (average/worst)
+Space Complexity: O(1)
+Stability: Stable
+Best Case: O(n) (already sorted)
+Worst Case: O(n²) (reverse order)
+Use Case: Small datasets, mostly sorted data
+
+
+4. Quick Sort
+Time Complexity: O(n log n) (average) / O(n²) (worst)
+Space Complexity: O(log n)
+Stability: Unstable
+Best Case: O(n log n) (balanced partition)
+Worst Case: O(n²) (unbalanced partition)
+Use Case: Large datasets, fast in-place sorting
+
+
+5. Merge Sort
+Time Complexity: O(n log n) (average/worst)
+Space Complexity: O(n)
+Stability: Stable
+Best Case: O(n log n)
+Worst Case: O(n log n)
+Use Case: Large datasets, when stability is required
+
+
+Comparative Summary
+
+1.Best for Small Datasets: Insertion Sort (if nearly sorted) or Selection Sort (if memory is constrained).
+2.Fastest for Large Datasets: Quick Sort (generally fastest in practice), Merge Sort (guaranteed O(n log n) performance and stability).
+3.Memory Usage: Bubble Sort, Selection Sort, and Insertion Sort are memory-efficient (O(1)); Merge Sort requires additional space (O(n)).
+4.Stability: Bubble Sort, Insertion Sort, and Merge Sort are stable; Selection Sort and Quick Sort are not.
+
+Choosing the Right Algorithm:
+
+1.Consider Dataset Size: Use simpler sorts for small or nearly sorted datasets; opt for Quick or Merge Sort for larger datasets.
+2.Evaluate Stability Needs: Use stable sorts (Bubble, Insertion, Merge) when the order of equal elements matters.
+3.Memory Constraints: Choose in-place algorithms (Bubble, Selection, Insertion, Quick) for limited memory environments.

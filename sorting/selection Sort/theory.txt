@@ -1,0 +1,34 @@
+// Selection Sort is a simple sorting algorithm that divides the list into two parts: a sorted part and an unsorted part. Initially, the sorted part is empty, and the unsorted part contains all the elements. The algorithm repeatedly selects the smallest (or largest, depending on sorting order) element from the unsorted part and swaps it with the leftmost unsorted element, moving the boundary between the sorted and unsorted parts one element to the right.
+
+// How Selection Sort Works:
+// Start with the first element as the minimum.
+// Scan through the entire list to find the smallest element.
+// Swap the smallest element with the first element.
+// Move the boundary between the sorted and unsorted part by one element (so now the first element is sorted).
+// Repeat the process for the remaining unsorted portion of the list until the entire list is sorted.
+// Real-Life Example: Choosing the Smallest Item
+// Imagine you're sorting a list of 5 people standing in a line, each holding a different-sized item, and you want to sort them by the size of their item, smallest to largest:
+
+// You look at all the people and find the one with the smallest item.
+// You swap them with the first person in the line.
+// Then you look at the remaining unsorted people (from the second person onwards) and find the next smallest item.
+// Swap that person with the second person in the line.
+// Continue until everyone is standing in the correct order.
+// Example of Selection Sort:
+// Let’s sort the list [29, 10, 14, 37, 13] step by step using selection sort:
+
+// Initial List: [29, 10, 14, 37, 13]
+// Step 1: Find the smallest element from the list, which is 10. Swap it with the first element, 29 → [10, 29, 14, 37, 13]
+// Step 2: Find the next smallest element (from index 1 onwards), which is 13. Swap it with the second element, 29 → [10, 13, 14, 37, 29]
+// Step 3: Find the next smallest element (from index 2 onwards), which is 14. It's already in the correct position, so no swap needed → [10, 13, 14, 37, 29]
+// Step 4: Find the next smallest element (from index 3 onwards), which is 29. Swap it with 37 → [10, 13, 14, 29, 37]
+// Now the list is sorted: [10, 13, 14, 29, 37].
+
+// Key Points:
+// Time Complexity: Selection Sort has a time complexity of O(n²) because it makes n-1 comparisons in the first iteration, n-2 in the second, and so on.
+// Space Complexity: O(1), as it sorts the array in place without requiring extra memory.
+// Best Use Case: It's useful for small datasets or when memory is limited since it doesn't require additional storage. However, it's not efficient for large datasets compared to more advanced sorting algorithms like quicksort or mergesort.
+// Summary:
+// Selection Sort is intuitive but inefficient for large datasets.
+// It repeatedly finds the smallest element in the unsorted part and places it in the correct position.
+// It's simple to implement but has quadratic time complexity, making it slower than other more optimized sorting algorithms.

@@ -1,0 +1,31 @@
+// Quick Sort
+// Quick Sort is another divide-and-conquer algorithm but is generally faster than merge sort for many datasets because it doesn’t require additional memory for merging. The algorithm works by selecting a pivot element and partitioning the array around the pivot so that elements smaller than the pivot come before it and elements larger than the pivot come after it. It then recursively sorts the partitions.
+
+// How Quick Sort Works:
+
+// Choose a Pivot: Pick an element from the array to act as the pivot (usually the last or middle element).
+// Partition: Rearrange the array so that elements less than the pivot are on the left, and elements greater than the pivot are on the right.
+// Recursion: Apply quick sort recursively to the left and right partitions.
+// Combine: No need to merge; once the partitions are sorted, the array is sorted.
+// Steps with Example:
+
+// Let’s sort [10, 80, 30, 90, 40, 50, 70] using quick sort, with the last element as the pivot.
+
+// Step 1: Choose the pivot, which is 70. Partition the array:
+// Elements less than 70 → [10, 30, 40, 50]
+// Pivot 70
+// Elements greater than 70 → [80, 90] Result after partitioning: [10, 30, 40, 50, 70, 80, 90]
+// Step 2: Recursively apply quick sort to the left part [10, 30, 40, 50]:
+// Choose 50 as the pivot, partition: [10, 30, 40] and 50 Result: [10, 30, 40, 50]
+// Step 3: Recursively apply quick sort to [10, 30, 40]:
+// Choose 40 as the pivot, partition: [10, 30] and 40 Result: [10, 30, 40]
+// Step 4: Apply quick sort to [10, 30], and sort recursively until all elements are in place.
+// Final sorted array: [10, 30, 40, 50, 70, 80, 90].
+
+// Key Points of Quick Sort:
+
+// Time Complexity:
+// Best/Average Case: O(n log n) when the partitioning divides the array evenly.
+// Worst Case: O(n²), which happens when the pivot is the smallest or largest element and partitioning is highly unbalanced.
+// Space Complexity: O(log n) due to recursive function calls (in-place sorting).
+// Best Use Case: Quick sort is typically faster than merge sort for most datasets, but it's sensitive to pivot selection. It’s great when you don’t need stability and extra space.

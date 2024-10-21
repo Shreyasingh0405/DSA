@@ -1,0 +1,32 @@
+// Merge Sort
+// Merge Sort is a divide-and-conquer algorithm that splits the input array into smaller subarrays, sorts each subarray, and then merges them back together to produce the sorted array. It’s known for its efficiency and stability, especially with large datasets.
+
+// How Merge Sort Works:
+
+// Divide: Split the array into two halves.
+// Conquer: Recursively apply merge sort to both halves until each subarray contains only one element (a single element is already sorted).
+// Combine: Merge the two sorted halves into one sorted array.
+// Steps with Example:
+
+// Let’s sort [38, 27, 43, 3, 9, 82, 10] using merge sort.
+
+// Step 1: Split the array into two halves → [38, 27, 43] and [3, 9, 82, 10]
+// Step 2: Split each half again:
+// [38, 27, 43] → [38] and [27, 43]
+// [3, 9, 82, 10] → [3, 9] and [82, 10]
+// Step 3: Split further until all arrays have only one element:
+// [38], [27], [43], [3], [9], [82], [10]
+// Step 4: Merge adjacent arrays:
+// [27] and [43] → [27, 43]
+// [82] and [10] → [10, 82]
+// Now merge: [38] and [27, 43] → [27, 38, 43]
+// [3, 9] and [10, 82] → [3, 9, 10, 82]
+// Step 5: Merge the final two arrays:
+// [27, 38, 43] and [3, 9, 10, 82] → [3, 9, 10, 27, 38, 43, 82]
+// The array is now sorted: [3, 9, 10, 27, 38, 43, 82].
+
+// Key Points of Merge Sort:
+
+// Time Complexity: O(n log n) in all cases (best, worst, and average).
+// Space Complexity: O(n), because it requires extra space to merge arrays.
+// Best Use Case: Merge sort is effective for large datasets and when stability (preserving the order of equal elements) is needed.

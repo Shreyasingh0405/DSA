@@ -1,0 +1,28 @@
+// Bubble sort is a simple sorting algorithm that repeatedly steps through the list, compares adjacent elements, and swaps them if they are in the wrong order. This process is repeated until the list is sorted. It's called "bubble sort" because larger elements "bubble up" to the end of the list, while smaller elements gradually "sink" to their correct positions.
+
+// How Bubble Sort Works:
+// Starting from the first element, compare the current element with the next one.
+// If the current element is greater than the next element, swap them.
+// Move to the next pair of adjacent elements and repeat the comparison and swapping.
+// Once you've gone through the entire list, the largest element will have "bubbled up" to its correct position at the end.
+// Repeat the process for the remaining elements (ignoring the last sorted element) until no more swaps are needed.
+// Real-Life Example: Sorting Books by Height
+// Imagine you have a stack of books on a table, and you want to sort them by height, from shortest to tallest. Here's how bubble sort would work in this scenario:
+
+// First Pass (left to right):
+// Compare the first book with the second book. If the first book is taller, swap them.
+// Compare the second book with the third book, and so on, until you reach the last book. By the end of this pass, the tallest book will have "bubbled up" to the end of the stack.
+// Second Pass:
+// Start again from the first book and repeat the process, but this time you don’t have to compare the last book since it's already in the correct position.
+// By the end of this pass, the second-tallest book will have bubbled up to its correct position.
+// Subsequent Passes:
+// Continue this process until all the books are in the correct order. With each pass, the next-largest book moves to its correct position, and fewer books need to be compared.
+// After several passes, the stack of books will be sorted from shortest to tallest.
+
+// Visualizing Bubble Sort:
+// Let's sort the list [4, 2, 7, 1] using bubble sort:
+
+// Pass 1: Compare 4 and 2 → Swap → [2, 4, 7, 1] Compare 4 and 7 → No swap → [2, 4, 7, 1] Compare 7 and 1 → Swap → [2, 4, 1, 7]
+// Pass 2: Compare 2 and 4 → No swap → [2, 4, 1, 7] Compare 4 and 1 → Swap → [2, 1, 4, 7] 7 is already in the right place.
+// Pass 3: Compare 2 and 1 → Swap → [1, 2, 4, 7] No swaps needed after that.
+// Now the list is sorted: [1, 2, 4, 7].
