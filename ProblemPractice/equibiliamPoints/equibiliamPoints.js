@@ -21,4 +21,45 @@ function equilibriumPoint(arr) {
     return -1;
 }
 const arr = [1, 3, 5, 2, 2];
+//const arr = [1, 3,1,2,5];
+
 console.log(equilibriumPoint(arr));
+
+
+
+// two pointers
+
+
+function equilibriumPoint1(array) {
+    const n = array.length;
+    
+    // Edge case: If there's only one element, it's trivially the equilibrium point
+    if (n === 1) {
+        return 1;
+    }
+    
+    let left = 0;
+    let right = n - 1;
+    let leftSum = 0;
+    let rightSum = 0;
+
+    while (left < right) {
+        if (leftSum < rightSum) {
+            leftSum += array[left];
+            left++;
+        } else {
+            rightSum += array[right];
+            right--;
+        }
+    }
+
+    // At this point, 'left' should be the equilibrium index if leftSum equals rightSum
+    if (leftSum === rightSum) {
+        return left + 1; // return 1-based index
+    }
+
+    return -1; // No equilibrium point found
+}
+
+// Example
+console.log(equilibriumPoint1([1, 3, 5, 2, 2]));  

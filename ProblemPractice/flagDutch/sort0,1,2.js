@@ -23,6 +23,7 @@ console.log(sortArray([0,2,1,2,0]))
 //2nd way
 //two pointers
 
+//need to go through
 class Solution {
     sort012(arr) {
         let low = 0;
@@ -49,3 +50,36 @@ class Solution {
 // Example usage:
 const solution = new Solution();
 console.log(solution.sort012([0, 1, 2, 0, 1, 2, 1, 0]))
+
+function countingSort(arr) {
+    const count = [0, 0, 0]; // count[0] for 0s, count[1] for 1s, count[2] for 2s
+
+    // Count occurrences of each number
+    for (const num of arr) {
+        count[num]++;
+    }
+
+    // Reconstruct the array based on counts
+    let index = 0;
+    for (let i = 0; i < count[0]; i++) {
+        arr[index++] = 0;
+    }
+    for (let i = 0; i < count[1]; i++) {
+        arr[index++] = 1;
+    }
+    for (let i = 0; i < count[2]; i++) {
+        arr[index++] = 2;
+    }
+
+    return arr;
+}
+
+// Example usage:
+console.log(countingSort([0, 2, 1, 2, 0]));
+
+function sortWithBuiltIn(arr) {
+    return arr.sort((a, b) => a - b);
+}
+
+// Example usage:
+console.log(sortWithBuiltIn([0, 2, 1, 2, 0]));

@@ -27,3 +27,36 @@ console.log("Largest:",fourthLargest);
 //smallest
 const fourthSmallest = uniqueSortedArray[k - 1];  
 console.log("Smallest:", fourthSmallest); 
+
+
+
+//=============================================*******=================================//
+
+function findKthLargest(arr, k) {
+    const frequencyMap = new Map();
+
+    // Step 1: Count the frequency of each element
+    for (let num of arr) {
+        if (frequencyMap.has(num)) {
+            frequencyMap.set(num, frequencyMap.get(num) + 1);
+        } else {
+            frequencyMap.set(num, 1);
+        }
+    }
+
+    // Step 2: Get all unique elements from the Map and sort them in descending order
+    const uniqueElements = Array.from(frequencyMap.keys()).sort((a, b) => b - a);
+
+    // Step 3: Return the Kth largest element
+    return uniqueElements[k - 1];
+}
+
+// Example Usage
+const array1 = [3, 2, 1, 5, 6, 4];
+const k1 = 2;
+console.log(findKthLargest(array1, k1));  // Output: 5
+
+
+//========================****====================//
+
+
