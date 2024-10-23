@@ -51,6 +51,7 @@ class Solution {
 const solution = new Solution();
 console.log(solution.sort012([0, 1, 2, 0, 1, 2, 1, 0]))
 
+//count occurance Approach
 function countingSort(arr) {
     const count = [0, 0, 0]; // count[0] for 0s, count[1] for 1s, count[2] for 2s
 

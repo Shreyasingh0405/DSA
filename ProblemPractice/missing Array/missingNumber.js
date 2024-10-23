@@ -76,7 +76,7 @@ var missingNumberWithMap = function(nums) {
  */
 var missingNumberWithBooleanArray = function(nums) {
     let n = nums.length;
-    let seen = new Array(n + 1).fill(false);
+    let seen = new Array(n + 1).fill(false); //auxiliary array
 
     for (let num of nums) {
         seen[num] = true; // Mark the number as seen
