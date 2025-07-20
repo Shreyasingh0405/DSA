@@ -18,10 +18,11 @@ function duplicates(arr) {
     const duplicatesArray = [];
     for (let [key, value] of map) {
         if (value > 1) {
-            duplicatesArray.push(key);
+            duplicatesArray.push(value);
         }
     }
-
-    return duplicatesArray;
+return duplicatesArray;
 }
-console.log(duplicates([0, 3, 1, 2]))
+console.log(duplicates([2, 3, 1, 2, 3]))
+
+//count of duplicate values

@@ -27,3 +27,5 @@ function rotateArrayByOne(arr) {
     return arr;
 }
 console.log(rotatedArr);  
+
+//rotate Array by clockwise and anticlockwise k times 
